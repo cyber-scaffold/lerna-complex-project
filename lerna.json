@@ -1,0 +1,37 @@
+{
+  "npmClientArgs": [
+    "--no-package-lock"
+  ],
+  "command": {
+    "add": {
+      "noBootstrap": true
+    },
+    "run": {
+      "stream": true
+    },
+    "version": {
+      "yes": true
+    },
+    "bootstrap": {
+      "hoist": true,
+      "nohoist": [
+        "dva",
+        "@umijs/*"
+      ],
+      "npmClientArgs": [
+        "--no-package-lock"
+      ]
+    },
+    "publish": {
+      "ignoreChanges": [
+        "**/.bin/**"
+      ],
+      "registry": "https://registry.npmjs.org/"
+    }
+  },
+  "packages": [
+    "packages/projects/*",
+    "packages/npm-package/*"
+  ],
+  "version": "independent"
+}
