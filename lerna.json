@@ -4,6 +4,7 @@
   ],
   "command": {
     "add": {
+      "exact": true,
       "noBootstrap": true
     },
     "run": {
@@ -13,25 +14,17 @@
       "yes": true
     },
     "bootstrap": {
-      "hoist": true,
-      "nohoist": [
-        "dva",
-        "@umijs/*"
-      ],
-      "npmClientArgs": [
-        "--no-package-lock"
-      ]
+      "ignore": []
     },
     "publish": {
+      "ignore": [],
       "ignoreChanges": [
         "**/.bin/**"
       ],
       "registry": "https://registry.npmjs.org/"
     }
   },
-  "packages": [
-    "packages/projects/*",
-    "packages/npm-package/*"
-  ],
-  "version": "independent"
+  "npmClient": "yarn",
+  "useWorkspaces": true,
+  "version": "1.0.1"
 }
